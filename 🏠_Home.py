@@ -18,12 +18,12 @@ st.write('')
 # Loading images and videos only once
 @st.experimental_singleton
 def read_objects():
-    img_1 = Image.open('/work/M3/Images/Home_img_1.png')
-    img_2 = Image.open('/work/M3/Images/Home_img_2.png')
-    img_3 = Image.open('/work/M3/Images/Home_img_3.png')
-    video_1 = open('/work/M3/Images/Home_vid_1.mov', 'rb')
-    video_2 = open('/work/M3/Images/Home_vid_2.mov', 'rb')
-    video_3 = open('/work/M3/Images/Home_vid_3.mov', 'rb')
+    img_1 = Image.open('Images/Home_img_1.png')
+    img_2 = Image.open('Images/Home_img_2.png')
+    img_3 = Image.open('Images/Home_img_3.png')
+    video_1 = open('Images/Home_vid_1.mov', 'rb')
+    video_2 = open('Images/Home_vid_2.mov', 'rb')
+    video_3 = open('Images/Home_vid_3.mov', 'rb')
     return img_1, img_2, img_3, video_1, video_2, video_3
 
 img_1, img_2, img_3, video_1, video_2, video_3 = read_objects()
