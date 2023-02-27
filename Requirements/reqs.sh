@@ -1,1 +1,0 @@
-pip install -r M3/Requirements/requirements.txt
