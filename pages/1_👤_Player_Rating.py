@@ -17,10 +17,7 @@ st.set_page_config(
     layout="wide")
 
 # Expanding the width of the sidebar (to fit feature names in one line in the sidebar)
-st.markdown(
-"""<style>[data-testid="stSidebar"][aria-expanded="true"] > div:first-child {width: 500px;}
-[data-testid="stSidebar"][aria-expanded="false"] > div:first-child {width: 500px;}
-</style>""",unsafe_allow_html=True)
+st.markdown("""<style>[data-testid="stSidebar"][aria-expanded="true"] > div:first-child {width: 500px;}[data-testid="stSidebar"][aria-expanded="false"] > div:first-child {width: 500px;}</style>""",unsafe_allow_html=True)
 
 # Loading data, models, scalers, explainers, etc., only once
 @st.experimental_singleton
