@@ -1,0 +1,8 @@
+matplotlib==3.7.0
+numpy==1.23.3
+pandas==1.4.4
+Pillow==9.4.0
+plotly==5.13.1
+shap==0.41.0
+streamlit==1.12.2
+streamlit_shap==1.0.2
