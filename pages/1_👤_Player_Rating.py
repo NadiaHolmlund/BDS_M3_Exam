@@ -26,13 +26,13 @@ st.markdown(
 @st.experimental_singleton
 def read_objects():
     # Importing datasets
-    BL18 = pd.read_csv(r'/work/M3/CSV files/Bundesliga18_rating.csv', sep=",", decimal=",").reset_index(drop=True)
-    BL19 = pd.read_csv(r'/work/M3/CSV files/Bundesliga19_rating.csv', sep=",", decimal=",").reset_index(drop=True)
-    BL20 = pd.read_csv(r'/work/M3/CSV files/Bundesliga20_rating.csv', sep=",", decimal=",").reset_index(drop=True)
-    BL21 = pd.read_csv(r'/work/M3/CSV files/Bundesliga21_rating.csv', sep=",", decimal=",").reset_index(drop=True)
-    BL22 = pd.read_csv(r'/work/M3/CSV files/Bundesliga22_rating.csv', sep=",", decimal=",").reset_index(drop=True)
-    SL21 = pd.read_csv(r'/work/M3/CSV files/Superliga21_rating.csv', sep=",", decimal=",").reset_index(drop=True)
-    SL22 = pd.read_csv(r'/work/M3/CSV files/Superliga22_rating.csv', sep=",", decimal=",").reset_index(drop=True)
+    BL18 = pd.read_csv(r'CSV files/Bundesliga18_rating.csv', sep=",", decimal=",").reset_index(drop=True)
+    BL19 = pd.read_csv(r'CSV files/Bundesliga19_rating.csv', sep=",", decimal=",").reset_index(drop=True)
+    BL20 = pd.read_csv(r'CSV files/Bundesliga20_rating.csv', sep=",", decimal=",").reset_index(drop=True)
+    BL21 = pd.read_csv(r'CSV files/Bundesliga21_rating.csv', sep=",", decimal=",").reset_index(drop=True)
+    BL22 = pd.read_csv(r'CSV files/Bundesliga22_rating.csv', sep=",", decimal=",").reset_index(drop=True)
+    SL21 = pd.read_csv(r'CSV files/Superliga21_rating.csv', sep=",", decimal=",").reset_index(drop=True)
+    SL22 = pd.read_csv(r'CSV files/Superliga22_rating.csv', sep=",", decimal=",").reset_index(drop=True)
 
     BL18 = BL18.dropna(subset=['Duels per 90'])
     BL19 = BL19.dropna(subset=['Duels per 90'])
@@ -138,12 +138,12 @@ if position == 'Position':
 @st.experimental_singleton
 def read_objects():
     # Model, scaler, explainer and features selected for each position
-    GK_model = pickle.load(open('/work/M3/Pickles/1_GK/GK_model.pkl','rb'))
-    GK_scaler = pickle.load(open('/work/M3/Pickles/1_GK/GK_scaler.pkl','rb'))
-    GK_shap_values = pickle.load(open('/work/M3/Pickles/1_GK/GK_shap.pkl','rb'))
-    GK_rmse  = pickle.load(open('/work/M3/Pickles/1_GK/GK_rmse.pkl','rb'))
+    GK_model = pickle.load(open('Pickles/1_GK/GK_model.pkl','rb'))
+    GK_scaler = pickle.load(open('Pickles/1_GK/GK_scaler.pkl','rb'))
+    GK_shap_values = pickle.load(open('Pickles/1_GK/GK_shap.pkl','rb'))
+    GK_rmse  = pickle.load(open('Pickles/1_GK/GK_rmse.pkl','rb'))
     GK_explainer = shap.TreeExplainer(GK_model)
-    GK_fs = pd.read_csv('/work/M3/Pickles/1_GK/GK_fs.csv')
+    GK_fs = pd.read_csv('Pickles/1_GK/GK_fs.csv')
 
     return GK_model, GK_scaler, GK_shap_values, GK_rmse, GK_explainer, GK_fs
 
@@ -312,12 +312,12 @@ if position == 'Goalkeeper':
 @st.experimental_singleton
 def read_objects():
     # Model, scaler, explainer and features selected for each position
-    CD_model = pickle.load(open('/work/M3/Pickles/2_CD/CD_model.pkl','rb'))
-    CD_scaler = pickle.load(open('/work/M3/Pickles/2_CD/CD_scaler.pkl','rb'))
-    CD_shap_values = pickle.load(open('/work/M3/Pickles/2_CD/CD_shap.pkl','rb'))
-    CD_rmse  = pickle.load(open('/work/M3/Pickles/2_CD/CD_rmse.pkl','rb'))
+    CD_model = pickle.load(open('Pickles/2_CD/CD_model.pkl','rb'))
+    CD_scaler = pickle.load(open('Pickles/2_CD/CD_scaler.pkl','rb'))
+    CD_shap_values = pickle.load(open('Pickles/2_CD/CD_shap.pkl','rb'))
+    CD_rmse  = pickle.load(open('Pickles/2_CD/CD_rmse.pkl','rb'))
     CD_explainer = shap.TreeExplainer(CD_model)
-    CD_fs = pd.read_csv('/work/M3/Pickles/2_CD/CD_fs.csv')
+    CD_fs = pd.read_csv('Pickles/2_CD/CD_fs.csv')
 
     return CD_model, CD_scaler, CD_shap_values, CD_rmse, CD_explainer, CD_fs
 
@@ -463,12 +463,12 @@ if position == 'Central Defender':
 @st.experimental_singleton
 def read_objects():
     # Model, scaler, explainer and features selected for each position
-    FB_model = pickle.load(open('/work/M3/Pickles/3_FB/FB_model.pkl','rb'))
-    FB_scaler = pickle.load(open('/work/M3/Pickles/3_FB/FB_scaler.pkl','rb'))
-    FB_shap_values = pickle.load(open('/work/M3/Pickles/3_FB/FB_shap.pkl','rb'))
-    FB_rmse  = pickle.load(open('/work/M3/Pickles/3_FB/FB_rmse.pkl','rb'))
+    FB_model = pickle.load(open('Pickles/3_FB/FB_model.pkl','rb'))
+    FB_scaler = pickle.load(open('Pickles/3_FB/FB_scaler.pkl','rb'))
+    FB_shap_values = pickle.load(open('Pickles/3_FB/FB_shap.pkl','rb'))
+    FB_rmse  = pickle.load(open('Pickles/3_FB/FB_rmse.pkl','rb'))
     FB_explainer = shap.TreeExplainer(FB_model)
-    FB_fs = pd.read_csv('/work/M3/Pickles/3_FB/FB_fs.csv')
+    FB_fs = pd.read_csv('Pickles/3_FB/FB_fs.csv')
 
     return FB_model, FB_scaler, FB_shap_values, FB_rmse, FB_explainer, FB_fs
 
@@ -612,12 +612,12 @@ if position == 'Full Back':
 @st.experimental_singleton
 def read_objects():
     # Model, scaler, explainer and features selected for each position
-    DMF_model = pickle.load(open('/work/M3/Pickles/4_DMF/DMF_model.pkl','rb'))
-    DMF_scaler = pickle.load(open('/work/M3/Pickles/4_DMF/DMF_scaler.pkl','rb'))
-    DMF_shap_values = pickle.load(open('/work/M3/Pickles/4_DMF/DMF_shap.pkl','rb'))
-    DMF_rmse  = pickle.load(open('/work/M3/Pickles/4_DMF/DMF_rmse.pkl','rb'))
+    DMF_model = pickle.load(open('Pickles/4_DMF/DMF_model.pkl','rb'))
+    DMF_scaler = pickle.load(open('Pickles/4_DMF/DMF_scaler.pkl','rb'))
+    DMF_shap_values = pickle.load(open('Pickles/4_DMF/DMF_shap.pkl','rb'))
+    DMF_rmse  = pickle.load(open('Pickles/4_DMF/DMF_rmse.pkl','rb'))
     DMF_explainer = shap.TreeExplainer(DMF_model)
-    DMF_fs = pd.read_csv('/work/M3/Pickles/4_DMF/DMF_fs.csv')
+    DMF_fs = pd.read_csv('Pickles/4_DMF/DMF_fs.csv')
 
     return DMF_model, DMF_scaler, DMF_shap_values, DMF_rmse, DMF_explainer, DMF_fs
 
@@ -761,12 +761,12 @@ if position == 'Defensive Midfielder':
 @st.experimental_singleton
 def read_objects():
     # Model, scaler, explainer and features selected for each position
-    CMF_model = pickle.load(open('/work/M3/Pickles/5_CMF/CMF_model.pkl','rb'))
-    CMF_scaler = pickle.load(open('/work/M3/Pickles/5_CMF/CMF_scaler.pkl','rb'))
-    CMF_shap_values = pickle.load(open('/work/M3/Pickles/5_CMF/CMF_shap.pkl','rb'))
-    CMF_rmse  = pickle.load(open('/work/M3/Pickles/5_CMF/CMF_rmse.pkl','rb'))
+    CMF_model = pickle.load(open('Pickles/5_CMF/CMF_model.pkl','rb'))
+    CMF_scaler = pickle.load(open('Pickles/5_CMF/CMF_scaler.pkl','rb'))
+    CMF_shap_values = pickle.load(open('Pickles/5_CMF/CMF_shap.pkl','rb'))
+    CMF_rmse  = pickle.load(open('Pickles/5_CMF/CMF_rmse.pkl','rb'))
     CMF_explainer = shap.TreeExplainer(CMF_model)
-    CMF_fs = pd.read_csv('/work/M3/Pickles/5_CMF/CMF_fs.csv')
+    CMF_fs = pd.read_csv('Pickles/5_CMF/CMF_fs.csv')
 
     return CMF_model, CMF_scaler, CMF_shap_values, CMF_rmse, CMF_explainer, CMF_fs
 
@@ -911,12 +911,12 @@ if position == 'Central Midfielder':
 @st.experimental_singleton
 def read_objects():
     # Model, scaler, explainer and features selected for each position
-    AMF_model = pickle.load(open('/work/M3/Pickles/6_AMF/AMF_model.pkl','rb'))
-    AMF_scaler = pickle.load(open('/work/M3/Pickles/6_AMF/AMF_scaler.pkl','rb'))
-    AMF_shap_values = pickle.load(open('/work/M3/Pickles/6_AMF/AMF_shap.pkl','rb'))
-    AMF_rmse  = pickle.load(open('/work/M3/Pickles/6_AMF/AMF_rmse.pkl','rb'))
+    AMF_model = pickle.load(open('Pickles/6_AMF/AMF_model.pkl','rb'))
+    AMF_scaler = pickle.load(open('Pickles/6_AMF/AMF_scaler.pkl','rb'))
+    AMF_shap_values = pickle.load(open('Pickles/6_AMF/AMF_shap.pkl','rb'))
+    AMF_rmse  = pickle.load(open('Pickles/6_AMF/AMF_rmse.pkl','rb'))
     AMF_explainer = shap.TreeExplainer(AMF_model)
-    AMF_fs = pd.read_csv('/work/M3/Pickles/6_AMF/AMF_fs.csv')
+    AMF_fs = pd.read_csv('Pickles/6_AMF/AMF_fs.csv')
 
     return AMF_model, AMF_scaler, AMF_shap_values, AMF_rmse, AMF_explainer, AMF_fs
 
@@ -1060,12 +1060,12 @@ if position == 'Attacking Midfielder':
 @st.experimental_singleton
 def read_objects():
     # Model, scaler, explainer and features selected for each position
-    WMF_model = pickle.load(open('/work/M3/Pickles/7_WMF/WMF_model.pkl','rb'))
-    WMF_scaler = pickle.load(open('/work/M3/Pickles/7_WMF/WMF_scaler.pkl','rb'))
-    WMF_shap_values = pickle.load(open('/work/M3/Pickles/7_WMF/WMF_shap.pkl','rb'))
-    WMF_rmse  = pickle.load(open('/work/M3/Pickles/7_WMF/WMF_rmse.pkl','rb'))
+    WMF_model = pickle.load(open('Pickles/7_WMF/WMF_model.pkl','rb'))
+    WMF_scaler = pickle.load(open('Pickles/7_WMF/WMF_scaler.pkl','rb'))
+    WMF_shap_values = pickle.load(open('Pickles/7_WMF/WMF_shap.pkl','rb'))
+    WMF_rmse  = pickle.load(open('Pickles/7_WMF/WMF_rmse.pkl','rb'))
     WMF_explainer = shap.TreeExplainer(WMF_model)
-    WMF_fs = pd.read_csv('/work/M3/Pickles/7_WMF/WMF_fs.csv')
+    WMF_fs = pd.read_csv('Pickles/7_WMF/WMF_fs.csv')
 
     return WMF_model, WMF_scaler, WMF_shap_values, WMF_rmse, WMF_explainer, WMF_fs
 
@@ -1209,12 +1209,12 @@ if position == 'Winger Midfielder':
 @st.experimental_singleton
 def read_objects():
     # Model, scaler, explainer and features selected for each position
-    FW_model = pickle.load(open('/work/M3/Pickles/8_FW/FW_model.pkl','rb'))
-    FW_scaler = pickle.load(open('/work/M3/Pickles/8_FW/FW_scaler.pkl','rb'))
-    FW_shap_values = pickle.load(open('/work/M3/Pickles/8_FW/FW_shap.pkl','rb'))
-    FW_rmse  = pickle.load(open('/work/M3/Pickles/8_FW/FW_rmse.pkl','rb'))
+    FW_model = pickle.load(open('Pickles/8_FW/FW_model.pkl','rb'))
+    FW_scaler = pickle.load(open('Pickles/8_FW/FW_scaler.pkl','rb'))
+    FW_shap_values = pickle.load(open('Pickles/8_FW/FW_shap.pkl','rb'))
+    FW_rmse  = pickle.load(open('Pickles/8_FW/FW_rmse.pkl','rb'))
     FW_explainer = shap.TreeExplainer(FW_model)
-    FW_fs = pd.read_csv('/work/M3/Pickles/8_FW/FW_fs.csv')
+    FW_fs = pd.read_csv('Pickles/8_FW/FW_fs.csv')
 
     return FW_model, FW_scaler, FW_shap_values, FW_rmse, FW_explainer, FW_fs
 

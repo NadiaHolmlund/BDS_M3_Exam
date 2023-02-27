@@ -24,13 +24,13 @@ st.markdown(
 @st.experimental_singleton
 def read_objects():
     # Importing datasets
-    BL18 = pd.read_csv(r'/work/M3/CSV files/Bundesliga18_rating.csv', sep=",", decimal=",").reset_index(drop=True).iloc[1: , :]
-    BL19 = pd.read_csv(r'/work/M3/CSV files/Bundesliga19_rating.csv', sep=",", decimal=",").reset_index(drop=True)
-    BL20 = pd.read_csv(r'/work/M3/CSV files/Bundesliga20_rating.csv', sep=",", decimal=",").reset_index(drop=True)
-    BL21 = pd.read_csv(r'/work/M3/CSV files/Bundesliga21_rating.csv', sep=",", decimal=",").reset_index(drop=True)
-    BL22 = pd.read_csv(r'/work/M3/CSV files/Bundesliga22_rating.csv', sep=",", decimal=",").reset_index(drop=True)
-    SL21 = pd.read_csv(r'/work/M3/CSV files/Superliga21_rating.csv', sep=",", decimal=",").reset_index(drop=True)
-    SL22 = pd.read_csv(r'/work/M3/CSV files/Superliga22_rating.csv', sep=",", decimal=",").reset_index(drop=True)
+    BL18 = pd.read_csv(r'CSV files/Bundesliga18_rating.csv', sep=",", decimal=",").reset_index(drop=True).iloc[1: , :]
+    BL19 = pd.read_csv(r'CSV files/Bundesliga19_rating.csv', sep=",", decimal=",").reset_index(drop=True)
+    BL20 = pd.read_csv(r'CSV files/Bundesliga20_rating.csv', sep=",", decimal=",").reset_index(drop=True)
+    BL21 = pd.read_csv(r'CSV files/Bundesliga21_rating.csv', sep=",", decimal=",").reset_index(drop=True)
+    BL22 = pd.read_csv(r'CSV files/Bundesliga22_rating.csv', sep=",", decimal=",").reset_index(drop=True)
+    SL21 = pd.read_csv(r'CSV files/Superliga21_rating.csv', sep=",", decimal=",").reset_index(drop=True)
+    SL22 = pd.read_csv(r'CSV files/Superliga22_rating.csv', sep=",", decimal=",").reset_index(drop=True)
 
     BL18 = BL18.dropna(subset=['Duels per 90'])
     BL19 = BL19.dropna(subset=['Duels per 90'])
