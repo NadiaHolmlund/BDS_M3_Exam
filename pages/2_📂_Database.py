@@ -15,10 +15,7 @@ st.set_page_config(
 st.write("""<style>[data-testid="stMetricDelta"] svg {display: none;}</style>""",unsafe_allow_html=True,)
 
 # Expanding the width of the sidebar (to better fit feature names in the sidebar)
-st.markdown(
-"""<style>[data-testid="stSidebar"][aria-expanded="true"] > div:first-child {width: 400px;}
-[data-testid="stSidebar"][aria-expanded="false"] > div:first-child {width: 400px;}
-</style>""",unsafe_allow_html=True)
+#st.markdown("""<style>[data-testid="stSidebar"][aria-expanded="true"] > div:first-child {width: 400px;}[data-testid="stSidebar"][aria-expanded="false"] > div:first-child {width: 400px;}</style>""",unsafe_allow_html=True)
 
 # Loading data only once
 @st.experimental_singleton
