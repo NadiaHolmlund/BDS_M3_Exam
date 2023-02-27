@@ -135,7 +135,7 @@ if position == 'Position':
 @st.experimental_singleton
 def read_objects():
     # Model, scaler, explainer and features selected for each position
-    GK_model = pickle.load(open('https://raw.githubusercontent.com/NadiaHolmlund/BDS_M3_Exam/main/Pickles/1_GK/GK_model.pkl','rb'))
+    GK_model = pickle.load(open('Pickles/1_GK/GK_model.pkl','rb'))
     GK_scaler = pickle.load(open('Pickles/1_GK/GK_scaler.pkl','rb'))
     GK_shap_values = pickle.load(open('Pickles/1_GK/GK_shap.pkl','rb'))
     GK_rmse  = pickle.load(open('Pickles/1_GK/GK_rmse.pkl','rb'))
