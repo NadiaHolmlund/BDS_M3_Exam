@@ -2,4 +2,14 @@
 
 ## Business Data Science - Module 3 - Exam
 
-The following project was completed to finish the first semester on the MSc programme in Business Data Science at Aalborg University. During the exam we had the opportunity to apply our skills in python and streamlit, focusing on creating a data driven business solution for the collaborating company. In our case, we developed a tool to predict football player ratings and identify player shortcomings on key performance indicators for a given position on the field. This to allow scouts to identify players with the highest potential of succeeding in professional sports.
+This project was completed after module 3 on the Data Science programme and represents the culmination of our efforts during the first semester. During this project, our team had the opportunity to develop a data-driven business solution for a collaborating company.
+
+Our project involved the creation of a tool designed to predict football player ratings and identify key performance indicators for a given position on the field, allowing scouts to more easily identify players with the highest potential for success in professional sports.
+
+To accomplish this, our team conducted extensive feature engineering and testing, leveraging a variety of models including simple models, tree-based models, and gradient-boosted models. Our team then utilized hyperparameter-tuning to optimize the performance of our models, ultimately selecting the best-performing model to power an interactive application designed for ease-of-use by end-users.
+
+In summary, our project and collaboration with our partner company resulted in the creation of a data-driven business solution that can help identify the next generation of professional football players.
+
+Click the link below to check out the streamlit:
+
+https://nadiaholmlund-bds-m3-exam--home-7zffbj.streamlit.app
