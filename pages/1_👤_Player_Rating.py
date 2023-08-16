@@ -3,8 +3,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import shap==0.41.0
-from streamlit_shap==1.0.2 import st_shap
+import shap==0.41
+from streamlit_shap==1.0 import st_shap
 import pickle
 import plotly.graph_objects as go
 fig = go.Figure()
