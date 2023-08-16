@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 #import shap
-from streamlit_shap import st_shap
+#from streamlit_shap import st_shap
 import pickle
 import plotly.graph_objects as go
 fig = go.Figure()
@@ -139,7 +139,7 @@ def read_objects():
     GK_scaler = pickle.load(open('Pickles/1_GK/GK_scaler.pkl','rb'))
     GK_shap_values = pickle.load(open('Pickles/1_GK/GK_shap.pkl','rb'))
     GK_rmse  = pickle.load(open('Pickles/1_GK/GK_rmse.pkl','rb'))
-    GK_explainer = shap.TreeExplainer(GK_model)
+    #GK_explainer = shap.TreeExplainer(GK_model)
     GK_fs = pd.read_csv('Pickles/1_GK/GK_fs.csv')
 
     return GK_model, GK_scaler, GK_shap_values, GK_rmse, GK_explainer, GK_fs
