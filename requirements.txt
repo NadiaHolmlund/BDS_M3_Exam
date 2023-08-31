@@ -11,3 +11,4 @@ xgboost==1.7.2
 shap==0.41.0
 streamlit==1.12.2
 streamlit_shap==1.0.2
+numba==0.57.1
