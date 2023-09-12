@@ -311,14 +311,14 @@ def read_objects():
     # Model, scaler, explainer and features selected for each position
     CD_model = pickle.load(open('Pickles/2_CD/CD_model.pkl','rb'))
     CD_scaler = pickle.load(open('Pickles/2_CD/CD_scaler.pkl','rb'))
-    CD_shap_values = pickle.load(open('Pickles/2_CD/CD_shap.pkl','rb'))
+    #CD_shap_values = pickle.load(open('Pickles/2_CD/CD_shap.pkl','rb'))
     CD_rmse  = pickle.load(open('Pickles/2_CD/CD_rmse.pkl','rb'))
-    CD_explainer = shap.TreeExplainer(CD_model)
+    #CD_explainer = shap.TreeExplainer(CD_model)
     CD_fs = pd.read_csv('Pickles/2_CD/CD_fs.csv')
 
-    return CD_model, CD_scaler, CD_shap_values, CD_rmse, CD_explainer, CD_fs
+    return CD_model, CD_scaler, CD_rmse, CD_explainer, CD_fs
 
-CD_model, CD_scaler, CD_shap_values, CD_rmse, CD_explainer, CD_fs = read_objects()
+CD_model, CD_scaler, CD_rmse, CD_explainer, CD_fs = read_objects()
 
 # Setting up the page for position CD
 if position == 'Central Defender':
@@ -425,9 +425,9 @@ if position == 'Central Defender':
         col6.write('')
 
         # Displaying the SHAP values
-        with st.expander("Player Rating Explained"):
-            shap_value = CD_explainer.shap_values(user_input_scaled)
-            st_shap(shap.force_plot(CD_explainer.expected_value, shap_value, user_input_scaled), height=150, width=700)
+        #with st.expander("Player Rating Explained"):
+        #    shap_value = CD_explainer.shap_values(user_input_scaled)
+        #    st_shap(shap.force_plot(CD_explainer.expected_value, shap_value, user_input_scaled), height=150, width=700)
     
     # Default display when the button has not been pressed
     else:
@@ -462,14 +462,14 @@ def read_objects():
     # Model, scaler, explainer and features selected for each position
     FB_model = pickle.load(open('Pickles/3_FB/FB_model.pkl','rb'))
     FB_scaler = pickle.load(open('Pickles/3_FB/FB_scaler.pkl','rb'))
-    FB_shap_values = pickle.load(open('Pickles/3_FB/FB_shap.pkl','rb'))
+    #FB_shap_values = pickle.load(open('Pickles/3_FB/FB_shap.pkl','rb'))
     FB_rmse  = pickle.load(open('Pickles/3_FB/FB_rmse.pkl','rb'))
-    FB_explainer = shap.TreeExplainer(FB_model)
+    #FB_explainer = shap.TreeExplainer(FB_model)
     FB_fs = pd.read_csv('Pickles/3_FB/FB_fs.csv')
 
-    return FB_model, FB_scaler, FB_shap_values, FB_rmse, FB_explainer, FB_fs
+    return FB_model, FB_scaler, FB_rmse, FB_explainer, FB_fs
 
-FB_model, FB_scaler, FB_shap_values, FB_rmse, FB_explainer, FB_fs = read_objects()
+FB_model, FB_scaler, FB_rmse, FB_explainer, FB_fs = read_objects()
 
 # Setting up the page for position FB
 if position == 'Full Back':
@@ -576,9 +576,9 @@ if position == 'Full Back':
         col6.write('')
 
         # Displaying the SHAP values
-        with st.expander("Player Rating Explained"):
-            shap_value = FB_explainer.shap_values(user_input_scaled)
-            st_shap(shap.force_plot(FB_explainer.expected_value, shap_value, user_input_scaled), height=150, width=700)
+        #with st.expander("Player Rating Explained"):
+        #    shap_value = FB_explainer.shap_values(user_input_scaled)
+        #    st_shap(shap.force_plot(FB_explainer.expected_value, shap_value, user_input_scaled), height=150, width=700)
     
     # Default display when the button has not been pressed
     else:
@@ -611,14 +611,14 @@ def read_objects():
     # Model, scaler, explainer and features selected for each position
     DMF_model = pickle.load(open('Pickles/4_DMF/DMF_model.pkl','rb'))
     DMF_scaler = pickle.load(open('Pickles/4_DMF/DMF_scaler.pkl','rb'))
-    DMF_shap_values = pickle.load(open('Pickles/4_DMF/DMF_shap.pkl','rb'))
+    #DMF_shap_values = pickle.load(open('Pickles/4_DMF/DMF_shap.pkl','rb'))
     DMF_rmse  = pickle.load(open('Pickles/4_DMF/DMF_rmse.pkl','rb'))
-    DMF_explainer = shap.TreeExplainer(DMF_model)
+    #DMF_explainer = shap.TreeExplainer(DMF_model)
     DMF_fs = pd.read_csv('Pickles/4_DMF/DMF_fs.csv')
 
-    return DMF_model, DMF_scaler, DMF_shap_values, DMF_rmse, DMF_explainer, DMF_fs
+    return DMF_model, DMF_scaler, DMF_rmse, DMF_explainer, DMF_fs
 
-DMF_model, DMF_scaler, DMF_shap_values, DMF_rmse, DMF_explainer, DMF_fs = read_objects()
+DMF_model, DMF_scaler, DMF_rmse, DMF_explainer, DMF_fs = read_objects()
 
 # Setting up the page for position DMF
 if position == 'Defensive Midfielder':
@@ -725,9 +725,9 @@ if position == 'Defensive Midfielder':
         col6.write('')
 
         # Displaying the SHAP values
-        with st.expander("Player Rating Explained"):
-            shap_value = DMF_explainer.shap_values(user_input_scaled)
-            st_shap(shap.force_plot(DMF_explainer.expected_value, shap_value, user_input_scaled), height=150, width=700)
+        #with st.expander("Player Rating Explained"):
+        #    shap_value = DMF_explainer.shap_values(user_input_scaled)
+        #    st_shap(shap.force_plot(DMF_explainer.expected_value, shap_value, user_input_scaled), height=150, width=700)
     
     # Default display when the button has not been pressed
     else:
@@ -760,14 +760,14 @@ def read_objects():
     # Model, scaler, explainer and features selected for each position
     CMF_model = pickle.load(open('Pickles/5_CMF/CMF_model.pkl','rb'))
     CMF_scaler = pickle.load(open('Pickles/5_CMF/CMF_scaler.pkl','rb'))
-    CMF_shap_values = pickle.load(open('Pickles/5_CMF/CMF_shap.pkl','rb'))
+    #CMF_shap_values = pickle.load(open('Pickles/5_CMF/CMF_shap.pkl','rb'))
     CMF_rmse  = pickle.load(open('Pickles/5_CMF/CMF_rmse.pkl','rb'))
-    CMF_explainer = shap.TreeExplainer(CMF_model)
+    #CMF_explainer = shap.TreeExplainer(CMF_model)
     CMF_fs = pd.read_csv('Pickles/5_CMF/CMF_fs.csv')
 
-    return CMF_model, CMF_scaler, CMF_shap_values, CMF_rmse, CMF_explainer, CMF_fs
+    return CMF_model, CMF_scaler, CMF_rmse, CMF_explainer, CMF_fs
 
-CMF_model, CMF_scaler, CMF_shap_values, CMF_rmse, CMF_explainer, CMF_fs = read_objects()
+CMF_model, CMF_scaler, CMF_rmse, CMF_explainer, CMF_fs = read_objects()
 
 # Setting up the page for position CMF
 if position == 'Central Midfielder':
@@ -874,9 +874,9 @@ if position == 'Central Midfielder':
         col6.write('')
 
         # Displaying the SHAP values
-        with st.expander("Player Rating Explained"):
-            shap_value = CMF_explainer.shap_values(user_input_scaled)
-            st_shap(shap.force_plot(CMF_explainer.expected_value, shap_value, user_input_scaled), height=150, width=700)
+        #with st.expander("Player Rating Explained"):
+        #    shap_value = CMF_explainer.shap_values(user_input_scaled)
+        #    st_shap(shap.force_plot(CMF_explainer.expected_value, shap_value, user_input_scaled), height=150, width=700)
     
     # Default display when the button has not been pressed
     else:
@@ -910,14 +910,14 @@ def read_objects():
     # Model, scaler, explainer and features selected for each position
     AMF_model = pickle.load(open('Pickles/6_AMF/AMF_model.pkl','rb'))
     AMF_scaler = pickle.load(open('Pickles/6_AMF/AMF_scaler.pkl','rb'))
-    AMF_shap_values = pickle.load(open('Pickles/6_AMF/AMF_shap.pkl','rb'))
+    #AMF_shap_values = pickle.load(open('Pickles/6_AMF/AMF_shap.pkl','rb'))
     AMF_rmse  = pickle.load(open('Pickles/6_AMF/AMF_rmse.pkl','rb'))
-    AMF_explainer = shap.TreeExplainer(AMF_model)
+    #AMF_explainer = shap.TreeExplainer(AMF_model)
     AMF_fs = pd.read_csv('Pickles/6_AMF/AMF_fs.csv')
 
-    return AMF_model, AMF_scaler, AMF_shap_values, AMF_rmse, AMF_explainer, AMF_fs
+    return AMF_model, AMF_scaler, AMF_rmse, AMF_explainer, AMF_fs
 
-AMF_model, AMF_scaler, AMF_shap_values, AMF_rmse, AMF_explainer, AMF_fs = read_objects()
+AMF_model, AMF_scaler, AMF_rmse, AMF_explainer, AMF_fs = read_objects()
 
 # Setting up the page for position AMF
 if position == 'Attacking Midfielder':
@@ -1024,9 +1024,9 @@ if position == 'Attacking Midfielder':
         col6.write('')
 
         # Displaying the SHAP values
-        with st.expander("Player Rating Explained"):
-            shap_value = AMF_explainer.shap_values(user_input_scaled)
-            st_shap(shap.force_plot(AMF_explainer.expected_value, shap_value, user_input_scaled), height=150, width=700)
+        #with st.expander("Player Rating Explained"):
+        #    shap_value = AMF_explainer.shap_values(user_input_scaled)
+        #    st_shap(shap.force_plot(AMF_explainer.expected_value, shap_value, user_input_scaled), height=150, width=700)
     
     # Default display when the button has not been pressed
     else:
@@ -1059,14 +1059,14 @@ def read_objects():
     # Model, scaler, explainer and features selected for each position
     WMF_model = pickle.load(open('Pickles/7_WMF/WMF_model.pkl','rb'))
     WMF_scaler = pickle.load(open('Pickles/7_WMF/WMF_scaler.pkl','rb'))
-    WMF_shap_values = pickle.load(open('Pickles/7_WMF/WMF_shap.pkl','rb'))
+    #WMF_shap_values = pickle.load(open('Pickles/7_WMF/WMF_shap.pkl','rb'))
     WMF_rmse  = pickle.load(open('Pickles/7_WMF/WMF_rmse.pkl','rb'))
-    WMF_explainer = shap.TreeExplainer(WMF_model)
+    #WMF_explainer = shap.TreeExplainer(WMF_model)
     WMF_fs = pd.read_csv('Pickles/7_WMF/WMF_fs.csv')
 
-    return WMF_model, WMF_scaler, WMF_shap_values, WMF_rmse, WMF_explainer, WMF_fs
+    return WMF_model, WMF_scaler, WMF_rmse, WMF_explainer, WMF_fs
 
-WMF_model, WMF_scaler, WMF_shap_values, WMF_rmse, WMF_explainer, WMF_fs = read_objects()
+WMF_model, WMF_scaler, WMF_rmse, WMF_explainer, WMF_fs = read_objects()
 
 # Setting up the page for position WMF
 if position == 'Winger Midfielder':
@@ -1173,9 +1173,9 @@ if position == 'Winger Midfielder':
         col6.write('')
 
         # Displaying the SHAP values
-        with st.expander("Player Rating Explained"):
-            shap_value = WMF_explainer.shap_values(user_input_scaled)
-            st_shap(shap.force_plot(WMF_explainer.expected_value, shap_value, user_input_scaled), height=150, width=700)
+        #with st.expander("Player Rating Explained"):
+        #    shap_value = WMF_explainer.shap_values(user_input_scaled)
+        #    st_shap(shap.force_plot(WMF_explainer.expected_value, shap_value, user_input_scaled), height=150, width=700)
     
     # Default display when the button has not been pressed
     else:
@@ -1208,14 +1208,14 @@ def read_objects():
     # Model, scaler, explainer and features selected for each position
     FW_model = pickle.load(open('Pickles/8_FW/FW_model.pkl','rb'))
     FW_scaler = pickle.load(open('Pickles/8_FW/FW_scaler.pkl','rb'))
-    FW_shap_values = pickle.load(open('Pickles/8_FW/FW_shap.pkl','rb'))
+    #FW_shap_values = pickle.load(open('Pickles/8_FW/FW_shap.pkl','rb'))
     FW_rmse  = pickle.load(open('Pickles/8_FW/FW_rmse.pkl','rb'))
-    FW_explainer = shap.TreeExplainer(FW_model)
+    #FW_explainer = shap.TreeExplainer(FW_model)
     FW_fs = pd.read_csv('Pickles/8_FW/FW_fs.csv')
 
-    return FW_model, FW_scaler, FW_shap_values, FW_rmse, FW_explainer, FW_fs
+    return FW_model, FW_scaler, FW_rmse, FW_explainer, FW_fs
 
-FW_model, FW_scaler, FW_shap_values, FW_rmse, FW_explainer, FW_fs = read_objects()
+FW_model, FW_scaler, FW_rmse, FW_explainer, FW_fs = read_objects()
 
 # Setting up the page for position FW
 if position == 'Forwarder':
@@ -1322,9 +1322,9 @@ if position == 'Forwarder':
         col6.write('')
 
         # Displaying the SHAP values
-        with st.expander("Player Rating Explained"):
-            shap_value = FW_explainer.shap_values(user_input_scaled)
-            st_shap(shap.force_plot(FW_explainer.expected_value, shap_value, user_input_scaled), height=150, width=700)
+        #with st.expander("Player Rating Explained"):
+        #    shap_value = FW_explainer.shap_values(user_input_scaled)
+        #    st_shap(shap.force_plot(FW_explainer.expected_value, shap_value, user_input_scaled), height=150, width=700)
     
     # Default display when the button has not been pressed
     else:
