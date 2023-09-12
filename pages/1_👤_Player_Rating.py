@@ -142,9 +142,9 @@ def read_objects():
     #GK_explainer = shap.TreeExplainer(GK_model)
     GK_fs = pd.read_csv('Pickles/1_GK/GK_fs.csv')
 
-    return GK_model, GK_scaler, GK_rmse, GK_explainer, GK_fs
+    return GK_model, GK_scaler, GK_rmse, GK_fs
 
-GK_model, GK_scaler, GK_rmse, GK_explainer, GK_fs = read_objects()
+GK_model, GK_scaler, GK_rmse, GK_fs = read_objects()
 
 # Setting up the page for position GK
 if position == 'Goalkeeper':
@@ -316,9 +316,9 @@ def read_objects():
     #CD_explainer = shap.TreeExplainer(CD_model)
     CD_fs = pd.read_csv('Pickles/2_CD/CD_fs.csv')
 
-    return CD_model, CD_scaler, CD_rmse, CD_explainer, CD_fs
+    return CD_model, CD_scaler, CD_rmse, CD_fs
 
-CD_model, CD_scaler, CD_rmse, CD_explainer, CD_fs = read_objects()
+CD_model, CD_scaler, CD_rmse, CD_fs = read_objects()
 
 # Setting up the page for position CD
 if position == 'Central Defender':
@@ -467,9 +467,9 @@ def read_objects():
     #FB_explainer = shap.TreeExplainer(FB_model)
     FB_fs = pd.read_csv('Pickles/3_FB/FB_fs.csv')
 
-    return FB_model, FB_scaler, FB_rmse, FB_explainer, FB_fs
+    return FB_model, FB_scaler, FB_rmse, FB_fs
 
-FB_model, FB_scaler, FB_rmse, FB_explainer, FB_fs = read_objects()
+FB_model, FB_scaler, FB_rmse, FB_fs = read_objects()
 
 # Setting up the page for position FB
 if position == 'Full Back':
@@ -616,9 +616,9 @@ def read_objects():
     #DMF_explainer = shap.TreeExplainer(DMF_model)
     DMF_fs = pd.read_csv('Pickles/4_DMF/DMF_fs.csv')
 
-    return DMF_model, DMF_scaler, DMF_rmse, DMF_explainer, DMF_fs
+    return DMF_model, DMF_scaler, DMF_rmse, DMF_fs
 
-DMF_model, DMF_scaler, DMF_rmse, DMF_explainer, DMF_fs = read_objects()
+DMF_model, DMF_scaler, DMF_rmse, DMF_fs = read_objects()
 
 # Setting up the page for position DMF
 if position == 'Defensive Midfielder':
@@ -765,9 +765,9 @@ def read_objects():
     #CMF_explainer = shap.TreeExplainer(CMF_model)
     CMF_fs = pd.read_csv('Pickles/5_CMF/CMF_fs.csv')
 
-    return CMF_model, CMF_scaler, CMF_rmse, CMF_explainer, CMF_fs
+    return CMF_model, CMF_scaler, CMF_rmse, CMF_fs
 
-CMF_model, CMF_scaler, CMF_rmse, CMF_explainer, CMF_fs = read_objects()
+CMF_model, CMF_scaler, CMF_rmse, CMF_fs = read_objects()
 
 # Setting up the page for position CMF
 if position == 'Central Midfielder':
@@ -915,9 +915,9 @@ def read_objects():
     #AMF_explainer = shap.TreeExplainer(AMF_model)
     AMF_fs = pd.read_csv('Pickles/6_AMF/AMF_fs.csv')
 
-    return AMF_model, AMF_scaler, AMF_rmse, AMF_explainer, AMF_fs
+    return AMF_model, AMF_scaler, AMF_rmse, AMF_fs
 
-AMF_model, AMF_scaler, AMF_rmse, AMF_explainer, AMF_fs = read_objects()
+AMF_model, AMF_scaler, AMF_rmse, AMF_fs = read_objects()
 
 # Setting up the page for position AMF
 if position == 'Attacking Midfielder':
@@ -1064,9 +1064,9 @@ def read_objects():
     #WMF_explainer = shap.TreeExplainer(WMF_model)
     WMF_fs = pd.read_csv('Pickles/7_WMF/WMF_fs.csv')
 
-    return WMF_model, WMF_scaler, WMF_rmse, WMF_explainer, WMF_fs
+    return WMF_model, WMF_scaler, WMF_rmse, WMF_fs
 
-WMF_model, WMF_scaler, WMF_rmse, WMF_explainer, WMF_fs = read_objects()
+WMF_model, WMF_scaler, WMF_rmse, WMF_fs = read_objects()
 
 # Setting up the page for position WMF
 if position == 'Winger Midfielder':
@@ -1213,9 +1213,9 @@ def read_objects():
     #FW_explainer = shap.TreeExplainer(FW_model)
     FW_fs = pd.read_csv('Pickles/8_FW/FW_fs.csv')
 
-    return FW_model, FW_scaler, FW_rmse, FW_explainer, FW_fs
+    return FW_model, FW_scaler, FW_rmse, FW_fs
 
-FW_model, FW_scaler, FW_rmse, FW_explainer, FW_fs = read_objects()
+FW_model, FW_scaler, FW_rmse, FW_fs = read_objects()
 
 # Setting up the page for position FW
 if position == 'Forwarder':
