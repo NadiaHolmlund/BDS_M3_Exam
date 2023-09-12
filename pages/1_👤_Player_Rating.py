@@ -276,9 +276,9 @@ if position == 'Goalkeeper':
         col6.write('')
 
         # Displaying the SHAP values
-        with st.expander("Player Rating Explained"):
-            shap_value = GK_explainer.shap_values(user_input_scaled)
-            st_shap(shap.force_plot(GK_explainer.expected_value, shap_value, user_input_scaled), height=150, width=700)
+        #with st.expander("Player Rating Explained"):
+        #    shap_value = GK_explainer.shap_values(user_input_scaled)
+        #    st_shap(shap.force_plot(GK_explainer.expected_value, shap_value, user_input_scaled), height=150, width=700)
     
     # Default display when the button has not been pressed
     else:
