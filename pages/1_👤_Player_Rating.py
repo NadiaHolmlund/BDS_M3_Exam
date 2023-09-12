@@ -1332,5 +1332,5 @@ if position == 'Forwarder':
         col4.write('')
         col5.metric(label="Mean Error", value='00.0')
         col6.write('')
-        with st.expander("Player Rating Explained"):
-            st.write('')
+        #with st.expander("Player Rating Explained"):
+        #    st.write('')
