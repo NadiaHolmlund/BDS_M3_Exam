@@ -142,9 +142,9 @@ def read_objects():
     #GK_explainer = shap.TreeExplainer(GK_model)
     GK_fs = pd.read_csv('Pickles/1_GK/GK_fs.csv')
 
-    return GK_model, GK_scaler, GK_shap_values, GK_rmse, GK_explainer, GK_fs
+    return GK_model, GK_scaler, GK_rmse, GK_explainer, GK_fs
 
-GK_model, GK_scaler, GK_shap_values, GK_rmse, GK_explainer, GK_fs = read_objects()
+GK_model, GK_scaler, GK_rmse, GK_explainer, GK_fs = read_objects()
 
 # Setting up the page for position GK
 if position == 'Goalkeeper':
